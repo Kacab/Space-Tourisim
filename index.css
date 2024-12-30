@@ -191,22 +191,21 @@
     body{
         margin: 0;
         padding: 0;
-        background-color: red;
+      
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        background-image: url(./starter-code/assets/home/background-home-mobile.jpg);
        
     }
 
     .navbar{
         width: 60%;
        height: 100vh;
-        background-color: aqua;
-        /* display: flex;
-        flex-direction: row;
-       */
-            display: none;   
+        background-color: black;
+       /* opacity: 0.5; */
+        /* filter: blur(1px);   */
     }
 
     .nav{
@@ -215,6 +214,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        
         /* display: none; */
         
     }
@@ -224,13 +224,13 @@
         flex-direction: column;
         justify-content: space-between;
        height: 50%;
-       background-color: wheat;
+      
         
     }
 
     .list a{
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
     .list li{
@@ -246,7 +246,15 @@
      top: 15px;       
     
     }
-    
+    #Hum{
+        /* background-color: white; */
+        width: 60px;
+        height: 40px;
+    }
+
+    .exitwhite-bars path {
+        fill: white;
+    }
     
 }
 
