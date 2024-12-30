@@ -11,9 +11,7 @@ let hidden = true
 
 
 
-function show(){
-nav.style.display ='block'
-}
+
 
 function hide(){
     
@@ -23,7 +21,9 @@ function hide(){
    
 
 }
-
+function show(){
+    nav.style.display ='block'
+    }
   
 
 hum.addEventListener('click',function(){
