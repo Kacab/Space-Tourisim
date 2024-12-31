@@ -187,151 +187,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width:480px) {
 
     
@@ -352,7 +207,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        background-image: url(./background-destination-mobile.jpg);
+        background-image: url(./starter-code/assets/destination/background-destination-mobile.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         font-family: Montserrat;
@@ -476,6 +331,74 @@
       color: black;
     }
     
+    .planets{
+        width: 100%;
+        height: 300px;
+       
+        position: absolute;
+        top: 80px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       
+       
+       align-items: center;
+       border: 1px solid white;
+
+       
+    } 
+
+    .moon{
+        width: 50%;
+        height: 50%;
+        border: 1px solid wheat;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-image: url(./starter-code/assets/destination/image-moon.webp);
+        background-repeat: no-repeat;
+        background-size: contain; */
+    }
+
+    .nav-planets{
+        width: 90%;
+        height: fit-content;
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 400px;
+        right: 25px;
+
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+       justify-content: space-evenly;
+
+        
+    }
+
+    li{
+        list-style: none;
+        color: white;
+        
+    }
+    .planets-info{
+        width: 100%;
+       height: fit-content;
+       position: absolute;
+       top: 450px;
+       /* border: 1px solid greenyellow; */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       color: white;
+
+
+    }
 }
 
 
