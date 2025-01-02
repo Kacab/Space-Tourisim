@@ -399,6 +399,14 @@
 
 
     }
+    #six{
+        display: none;
+        color: white;
+    }
+
+    #seven{
+        display: none;
+    }
 }
 
 
