@@ -17,6 +17,8 @@ const europaName = document.querySelector('#europaName')
 const marsName = document.querySelector('#marsName')
 const MarsDis = document.querySelector('#MarsDis')
 const europa = document.querySelector('#europa')
+const titanName = document.querySelector('#titanName')
+const TITAN = document.querySelector('#Titan')
 function MoonInfo() {
     fetch('/starter-code/data.json')
         .then((res) => res.json())
@@ -29,7 +31,7 @@ function MoonInfo() {
                 moonName.innerHTML = '';
                 marsName.innerHTML = '';
                 europaName.innerHTML = '';
-
+                titanName.innerHTML = ''
                 // Create new elements
                 const moonImage = data.destinations[0].images.png
                  console.log(moonImage)
@@ -41,6 +43,7 @@ function MoonInfo() {
                 const moonNameElement = document.createElement('p');
                 const moonDescriptionElement = document.createElement('p');
                 moonNameElement.innerText = firstName;
+               
                 moonDescriptionElement.innerText = moonDescription;
 
                 // Append new elements
@@ -60,6 +63,7 @@ function MoonInfo() {
         });
 }
 
+MoonInfo()
  
 
 function marsInfo() {
@@ -69,16 +73,18 @@ function marsInfo() {
             if (data.destinations.length > 0) {
                 const marsNameText = data.destinations[1].name;
                 const marsDescription = data.destinations[1].description;
-
+                     
                 // Clear the content before appending
                 marsName.innerHTML = '';
                 moonName.innerHTML = '';
                 europaName.innerHTML = ''
+                titanName.innerHTML = ''
 
                 // Create new elements
                 const marsNameElement = document.createElement('p');
                 const marsDescriptionElement = document.createElement('p');
                 marsNameElement.innerText = marsNameText;
+               
                 marsDescriptionElement.innerText = marsDescription;
                moon.style.display = 'none'
               
@@ -113,7 +119,8 @@ function europaInfo (){
         europaName.innerHTML=  '';
         marsName.innerHTML = '';
         moonName.innerHTML = '';
-   
+        titanName.innerHTML = ''
+
         const europanameElement = document.createElement('p')
         const europadiscriptionEllement = document.createElement('p')
     europadiscriptionEllement.innerText  = EuropaName
@@ -135,26 +142,57 @@ function europaInfo (){
 }
 
 
-// function titan(){
-//     fetch('/starter-code/data.json')
-//     .then((res)=>{
-//         return res.json()
-//     })
-//     .then((data)=>{
-//       if(data.destinations.length > 0 ){
-//       const sec = data.destinations[3].name
-//       const  marsDiscription = data.destinations[3].description
-//       console.log(sec)
-//       console.log(marsDiscription)
-//       p3.innerText = sec
-//       seven.appendChild(p3)
-//       }else{
-//         console.log('no')
-//       }
-//     })
-// }
+function titanInfo (){
+ return  new Promise((resolve, reject) => {
+    fetch('/starter-code/data.json')
+    .then((res)=>{
+        return res.json()
+    })
+    .then((data)=>{
+        console.log(data.destinations)
+        resolve(data.destinations)
+if(data.destinations.length > 0){
+    
+     marsName.innerHTML = ''
+     moonName.innerHTML = ''
+     europaName.innerHTML = ''
+    titanName.innerHTML = ''
+    
+
+    const titanName1 =  data.destinations[3].name
+    const titanDistText = data.destinations[3].description
+    
+    const TitanElementName = document.createElement('p')
+    const TitanDisElement = document.createElement('p')
+    TitanElementName.innerText = titanName1
+    TitanDisElement.innerText = titanDistText
+
+    titanName.appendChild(TitanElementName)
+    titanName.appendChild(TitanDisElement)
+    
+}
+        
+       
+    })
+    .catch((error)=>{
+        console.error(error)
+        reject(error)
+    })
+ })
+  
+}
 
 
+TITAN.addEventListener('click', function () {
+    titanInfo()
+      .then((data) => {
+        console.log('Data is here:', data);
+      })
+      .catch((error) => {
+        console.log('Error occurred:', error);
+      });
+  });
+  
 
 
 
@@ -212,3 +250,4 @@ europa.addEventListener('click',function(){
      europaInfo()
     
 })
+
