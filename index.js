@@ -183,15 +183,15 @@ if(data.destinations.length > 0){
 }
 
 
-TITAN.addEventListener('click', function () {
-    titanInfo()
-      .then((data) => {
-        console.log('Data is here:', data);
-      })
-      .catch((error) => {
-        console.log('Error occurred:', error);
-      });
-  });
+// TITAN.addEventListener('click', function () {
+//     titanInfo()
+//       .then((data) => {
+//         console.log('Data is here:', data);
+//       })
+//       .catch((error) => {
+//         console.log('Error occurred:', error);
+//       });
+//   });
   
 
 

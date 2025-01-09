@@ -393,28 +393,37 @@
        top: 450px;
        right: 25px;
         border: 1px solid greenyellow; 
-       display: flex;
-       flex-direction: row;
-       align-items: center;
        
-       
-       color: white;
 
 
     }
-    #bigger-span{
-      width: 100%;
-      height: fit-content;
-      display: flex;
-      flex-direction: row;
-      /* justify-content: center; */
-      align-items: center;
-    }
+   .bigger-dev{
+    color:  white;
+    width: 100%;
+    height: fit-content;
+    
 
-    #moonName p{
-        color: olive;
-    }
-   
+
+    
+   }
+
+   .Distance-info{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid wheat; */
+    position: absolute;
+    top: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .line{
+    width:80%;
+    height: fit-content;
+    border: 1px solid white
+   }
    
 }
 
