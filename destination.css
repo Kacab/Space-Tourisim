@@ -392,8 +392,8 @@
        position: absolute;
        top: 450px;
        right: 25px;
-        border: 1px solid greenyellow; 
-       
+        /* border: 1px solid greenyellow; 
+        */
 
 
     }
@@ -417,7 +417,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    color: white
    }
    .line{
     width:80%;
