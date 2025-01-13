@@ -20,7 +20,7 @@ const europa = document.querySelector('#europa')
 const titanName = document.querySelector('#titanName')
 const TITAN = document.querySelector('#Titan')
 function MoonInfo() {
-    fetch('/starter-code/data.json')
+    fetch('/data.json')
         .then((res) => res.json())
         .then((data) => {
             if (data.destinations.length > 0) {
@@ -67,7 +67,7 @@ MoonInfo()
  
 
 function marsInfo() {
-    fetch('/starter-code/data.json')
+    fetch('/data.json')
         .then((res) => res.json())
         .then((data) => {
             if (data.destinations.length > 0) {
@@ -107,7 +107,7 @@ function marsInfo() {
 
 
 function europaInfo (){
-    fetch('/starter-code/data.json')
+    fetch('/data.json')
     .then((res)=>{
         return res.json()
     })
