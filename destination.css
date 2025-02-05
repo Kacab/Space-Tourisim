@@ -352,7 +352,7 @@
        flex-direction: column;
        justify-content: center;
        
-       
+       color: white;
        align-items: center;
        /* border: 1px solid white; */
 
@@ -362,16 +362,61 @@
     .moon{
         width: 50%;
         height: 50%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-image: url(./starter-code/assets/destination/image-moon.webp);
+        background-image: url(./starter-code/assets/destination/image-moon.webp);
         background-repeat: no-repeat;
-        background-size: contain; */
+        background-size: contain;
         
+        
+    }
+
+    .mars{
+        width: 50%;
+        height: 50%;
+        /* border: 1px solid red; */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./starter-code/assets/destination/image-mars.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: none;
+    }
+    .europa{
+        width: 50%;
+        height: 50%;
+        /* border: 1px solid red; */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./starter-code/assets/destination/image-europa.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: none;
+    }
+
+    .titan{
+        width: 50%;
+        height: 50%;
+        /* border: 1px solid red; */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(./starter-code/assets/destination/image-titan.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: none;
     }
     
 
@@ -423,7 +468,7 @@
    .Distance-info{
     width: 100%;
     height: fit-content;
-    border: 1px solid wheat;
+    /* border: 1px solid wheat; */
     position: absolute;
     top: 620px;
     display: flex;

@@ -23,16 +23,73 @@ const AVG  = document.querySelector('#AVG-distance')
 const distnce  = document.querySelector('#estimated-time')
 const distnce2  = document.querySelector('#distance')
 const days  = document.querySelector('#days')
+const marsDiv = document.querySelector('.mars')
+const europaDiv = document.querySelector('.europa')
+const titanDiv = document.querySelector('.titan')
+
 
 function MoonInfo() {
-fetch('/data.json')
+fetch('data.json')
 .then((res) => res.json())
 .then((data) => {
     if (data.destinations.length > 0) {
+        // destination data
         const firstName = data.destinations[0].name;
         const moonDescription = data.destinations[0].description;
         const moonDistance1 = data.destinations[0].distance;
         const moonDistance2 = data.destinations[0].travel;
+
+        //crew data
+        const role = data.crew[0].role;
+      const Douglas = data.crew[0].name;
+
+      const roleHead = document.createElement('h3')
+      const douglasHead = document.createElement('h2')
+
+      roleHead.innerText = role
+      douglasHead.innerText = Douglas
+
+    //   crewDiv.appendChild(roleHead)
+    //   crewDiv.appendChild(douglasHead)
+     
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        
         // Clear the content before appending
         AVG.innerHTML = ''
@@ -48,10 +105,13 @@ fetch('/data.json')
         console.log('Image URL:', moonImage)
         const imageMoon = document.createElement('img')
         imageMoon.src = moonImage
+        marsDiv.style.display = 'none'
+        europaDiv.style.display = 'none'
+        titanDiv.style.display = 'none'
         
         console.log(imageMoon)
-        moon.appendChild(imageMoon)
-        // moon.style.display = 'block'
+        // moon.appendChild(imageMoon)
+        moon.style.display = 'block'
         // moon.appendChild(imageMoon)
         const moonNameElement = document.createElement('p');
         const moonDescriptionElement = document.createElement('p');
@@ -83,6 +143,8 @@ fetch('/data.json')
         moonName.style.display = 'block';
         marsName.style.display = 'none';
         
+
+       
     } else {
         console.log('Data not found');
     }
@@ -105,6 +167,9 @@ fetch('/data.json')
             const marsDistance = data.destinations[1].distance;
             const marsDistance2 = data.destinations[1].travel;
                
+            marsDiv.style.display = 'block'
+            europaDiv.style.display = 'none'
+            titanDiv.style.display = 'none'
             
             
             // Clear the content before appending
@@ -155,6 +220,7 @@ fetch('/data.json')
 }
 
 
+
 function europaInfo (){
 fetch('/data.json')
 .then((res)=>{
@@ -167,6 +233,11 @@ fetch('/data.json')
     const europaDist = data.destinations[2].distance
     const europaDist2 = data.destinations[2].travel
 
+
+europaDiv.style.display = 'block'
+marsDiv.style.display = 'none'
+titanDiv.style.display = 'none'
+moon.style.display = 'none'
 
     distnce2.innerHTML = ''
     days.innerHTML = ''
@@ -221,14 +292,22 @@ function titanInfo() {
 
             if (data.destinations.length > 0) {
                 // Clear existing content
-                days.innerHTML = '';
-                distnce2.innerHTML = '';
-                AVG.innerHTML = '';
-                distnce.innerHTML = '';
+                days.innerHTML = ''
+                distnce2.innerHTML = ''
+                AVG.innerHTML = ''
+                distnce.innerHTML = ''  
                 marsName.innerHTML = '';
                 moonName.innerHTML = '';
-                europaName.innerHTML = '';
-                titanName.innerHTML = '';
+                europaName.innerHTML = ''
+                titanName.innerHTML = ''
+                moon.style.display = 'none'
+    
+
+                // Show the Titan section and hide others
+                titanDiv.style.display = 'block';
+                marsDiv.style.display = 'none';
+                europaDiv.style.display = 'none';
+
 
                 // Get Titan data
                 const titanName1 = data.destinations[3].name;
@@ -321,6 +400,7 @@ hum.addEventListener('click',function(){
 
 Moon1.addEventListener('click',function(){
  MoonInfo()
+ console.log( 'moon is clicked')
   
     //six.style.display = 'block'
     
@@ -329,11 +409,13 @@ Moon1.addEventListener('click',function(){
 
 mars.addEventListener('click',function(){
    marsInfo()
+   console.log('mars clicked')
 })
 
 
 europa.addEventListener('click',function(){
      europaInfo()
+     console.log('europa clicked')
     
 })
 
